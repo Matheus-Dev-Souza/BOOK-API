@@ -9,22 +9,20 @@
 </head>
 <body>
     <div class="header">
-        <h1> BOOK CARIRI </h1>
+        <h1>BOOK CARIRI</h1>
         <ul>
-            <li><a href="#home">Ofertas do Dia</a></li>
-            <li><a href="#news">Mais Vendidos</a></li>
-            <li><a href="#contact">Lançamentos</a></li>
-            <li><a href="#contact">Livros Internacionais</a></li>
-            <li><a href="#contact">HQs e Mangás </a></li>
-            <li><a href="#contact">Livros Infantis</a></li>
-            <li><a href="#contact">Universitários</a></li>
-            <li><a href="#contact">Didáticos e Escolares</a></li>
-            <li><a href="#contact">Business</a></li>
-            <li><a href="#contact">Ciências</a></li>
-           
-            <li style="float:right"><a class="active" href="#about">Best Seller</a></li>
-          </ul>
-
+            <li><a href="#Ofertas do Dia" value="hardcover-fiction" id="fetch-books" >Ofertas do Dia</a></li>
+            <li><a href="#Mais Vendidos" value="paperback-nonfiction" id="fetch-books" >Mais Vendidos</a></li>
+            <li><a href="#Lançamentos">Lançamentos</a></li>
+            <li><a href="#Livros Internacionais">Livros Internacionais</a></li>
+            <li><a href="#HQs e Mangás">HQs e Mangás</a></li>
+            <li><a href="#Livros Infantis">Livros Infantis</a></li>
+            <li><a href="#Universitários">Universitários</a></li>
+            <li><a href="#Didáticos e Escolares">Didáticos e Escolares</a></li>
+            <li><a href="#Business">Business</a></li>
+            <li><a href="#Ciências">Ciências</a></li>
+            <li style="float:right"><a class="active" href="#Best Seller">Best Seller</a></li>
+        </ul>
     </div>
     <div class="container">
         <h1>Lista de Livros do New York Times</h1>
@@ -37,6 +35,6 @@
         <button id="fetch-books">Buscar Livros</button>
         <ul id="book-list" class="book-list"></ul>
     </div>
-    <script src="/src/js/script.js"></script>
+    <script src="/src/js/api.js"></script>
 </body>
 </html>
