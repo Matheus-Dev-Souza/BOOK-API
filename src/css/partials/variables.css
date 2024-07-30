@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+    --background-color: #f9f9f9;
+    --header-background: #333;
+    --text-color: #fff;
+    --card-background: #fff;
+    --border-color: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: Arial, sans-serif;
+}

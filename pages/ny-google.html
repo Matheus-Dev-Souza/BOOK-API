@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Livros - NYT</title>
+    <link rel="stylesheet" href="/pages/css/style.css">
+    <link rel="stylesheet" href="/src/css/header.css>
+</head>
+<body>
+    <div class="header">
+        <h1>BOOK CARIRI</h1>
+        <ul>
+            <li><a href="#Ofertas do Dia" value="hardcover-fiction" id="fetch-books" >Ofertas do Dia</a></li>
+            <li><a href="#Mais Vendidos" value="paperback-nonfiction" id="fetch-books" >Mais Vendidos</a></li>
+            <li><a href="#Lançamentos">Lançamentos</a></li>
+            <li><a href="#Livros Internacionais">Livros Internacionais</a></li>
+            <li><a href="#HQs e Mangás">HQs e Mangás</a></li>
+            <li><a href="#Livros Infantis">Livros Infantis</a></li>
+            <li><a href="#Universitários">Universitários</a></li>
+            <li><a href="#Didáticos e Escolares">Didáticos e Escolares</a></li>
+            <li><a href="#Business">Business</a></li>
+            <li><a href="#Ciências">Ciências</a></li>
+            <li style="float:right"><a class="active" href="#Best Seller">Best Seller</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Lista de Livros do New York Times</h1>
+        <label for="list-name">Selecione a lista:</label>
+        <select id="list-name">
+            <option value="hardcover-fiction">Hardcover Fiction</option>
+            <option value="paperback-nonfiction">Paperback Nonfiction</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+        <button id="fetch-books">Buscar Livros</button>
+        <ul id="book-list" class="book-list"></ul>
+    </div>
+    <script src="/pages/script copy.js"></script>
+</body>
+</html>
