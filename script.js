@@ -1,47 +1,41 @@
-document.getElementById('fetch-books').addEventListener('click', () => {
+document.getElementById('fetch-books').addEventListener('click', fetchBooks);
+document.getElementById('checkout').addEventListener('click', checkout);
+
+async function fetchBooks() {
     const listName = document.getElementById('list-name').value;
-    const apiKey = 'c7iPekCAVIoOVGKaBWBMUROiZFiQuyGU'; // Substitua pela sua chave de API real
-    const url = `https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=${apiKey}`;
+    const apiKey = 'c7iPekCAVIoOVGKaBWBMUROiZFiQuyGU';
+    const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=${apiKey}`);
+    const data = await response.json();
+    const books = data.results.books;
 
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na requisição: ' + response.status);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data); // Verifica a estrutura da resposta
-            const bookList = document.getElementById('book-list');
-            bookList.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+    const bookList = document.getElementById('book-list');
+    bookList.innerHTML = '';
 
-            if (data.results && data.results.books) {
-                data.results.books.forEach(book => {
-                    const listItem = document.createElement('li');
-                    listItem.classList.add('book-item');
+    books.forEach(book => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>${book.title} by ${book.author}</span>
+            <button onclick="addToCart('${book.title}', '${book.author}')">Adicionar ao Carrinho</button>
+        `;
+        bookList.appendChild(li);
+    });
+}
 
-                    listItem.innerHTML = `
-                        <h3>${book.title}</h3>
-                        <p><strong>Autor:</strong> ${book.author}</p>
-                        <p><strong>Rank:</strong> ${book.rank}</p>
-                        <p><strong>Semanas na Lista:</strong> ${book.weeks_on_list}</p>
-                        <p><strong>Descrição:</strong> ${book.description}</p>
-                        <a href="${book.amazon_product_url}" target="_blank">Comprar na Amazon</a>
-                    `;
+function addToCart(title, author) {
+    const cartList = document.getElementById('cart-list');
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <span>${title} by ${author}</span>
+        <button onclick="removeFromCart(this)">Remover</button>
+    `;
+    cartList.appendChild(li);
+}
 
-                    if (book.book_image) {
-                        const img = document.createElement('img');
-                        img.src = book.book_image;
-                        listItem.appendChild(img);
-                    }
+function removeFromCart(button) {
+    const li = button.parentElement;
+    li.remove();
+}
 
-                    bookList.appendChild(listItem);
-                });
-            } else {
-                bookList.innerHTML = '<p>Nenhum livro encontrado.</p>';
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao buscar livros:', error);
-        });
-});
+function checkout() {
+    alert('Compra finalizada com sucesso!');
+}

@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Livros - NYT</title>
+    <title>Loja de Livros - NYT</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="/css//header.css">
 </head>
 <body>
-    <div class="header">
-        <h1> BOOK CARIRI </h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li style="float:right"><a class="active" href="#about">About</a></li>
-          </ul>
-
-    </div>
+    <header>
+        <div class="logo">
+            <h1>Loja de Livros</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <h1>Lista de Livros do New York Times</h1>
-        <label for="list-name">Selecione a lista:</label>
-        <select id="list-name">
-            <option value="hardcover-fiction">Hardcover Fiction</option>
-            <option value="paperback-nonfiction">Paperback Nonfiction</option>
-            <!-- Adicione mais opções conforme necessário -->
-        </select>
-        <button id="fetch-books">Buscar Livros</button>
-        <ul id="book-list" class="book-list"></ul>
+        <section class="book-section">
+            <h2>Lista de Livros do New York Times</h2>
+            <label for="list-name">Selecione a lista:</label>
+            <select id="list-name">
+                <option value="hardcover-fiction">Hardcover Fiction</option>
+                <option value="paperback-nonfiction">Paperback Nonfiction</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <button id="fetch-books">Buscar Livros</button>
+            <ul id="book-list" class="book-list"></ul>
+        </section>
+        <aside class="cart-section">
+            <h2>Carrinho</h2>
+            <ul id="cart-list" class="cart-list"></ul>
+            <button id="checkout">Finalizar Compra</button>
+        </aside>
     </div>
     <script src="script.js"></script>
 </body>
