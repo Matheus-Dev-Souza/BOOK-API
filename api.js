@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = 'c7iPekCAVIoOVGKaBWBMUROiZFiQuyGU';
+    //const apiKey = 'c7iPekCAVIoOVGKaBWBMUROiZFiQuyGU';
+    const apiKey = 'AIzaSyBA-WNCj76NMk0jEbfl467w4OLGLG-K0QU';
     const bookList = document.getElementById('book-list');
     const cartList = document.getElementById('cart-list');
     let cart = [];
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function fetchBooks(listName) {
-        const url = `https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=${apiKey}`;
+        const url = `https://books.google.com/ebooks?id=buc0AAAAMAAJ&dq=holmes&as_brr=4&source=webstore_bookcard`;
 
         fetch(url)
             .then(response => response.json())
