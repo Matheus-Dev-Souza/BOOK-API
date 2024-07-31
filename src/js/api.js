@@ -1,6 +1,6 @@
 document.getElementById('fetch-books').addEventListener('click', () => {
     const listName = document.getElementById('list-name').value;
-    const apiKey = 'c7iPekCAVIoOVGKaBWBMUROiZFiQuyGU'; // Substitua pela sua chave de API real
+    const apiKey = 'chaveapi'; // Substitua pela sua chave de API real
     const url = `https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=${apiKey}`;
 
     fetch(url)
