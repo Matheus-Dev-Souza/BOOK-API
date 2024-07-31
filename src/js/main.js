@@ -3,7 +3,7 @@ document.getElementById('checkout').addEventListener('click', checkout);
 
 async function fetchBooks() {
     const listName = document.getElementById('list-name').value;
-    const apiKey = 'AIzaSyBA-WNCj76NMk0jEbfl467w4OLGLG-K0QU';
+    const apiKey = 'chaveapi';
     const query = listName; // Usar o valor selecionado como a consulta
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}`;
 
