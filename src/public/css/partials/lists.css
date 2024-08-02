@@ -1,0 +1,17 @@
+.book-list, .cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-list li, .cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.book-list li:last-child, .cart-list li:last-child {
+    border-bottom: none;
+}

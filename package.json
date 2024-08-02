@@ -1,18 +1,25 @@
 {
-  "name": "my-book-api",
+  "name": "sprintbooks",
   "version": "1.0.0",
-  "description": "Este projeto é uma aplicação Node.js que consome a API pública de livros do New York Times e a expõe por meio de uma interface simples.",
+  "description": "Avaliação das segunda e terceira sprints do programa de bolsas Compass UOL para formação em machine learning para AWS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.7.2",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
   },
-  "devDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2024-JULHO-A/sprints-2-3-pb-aws-julho-a.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2024-JULHO-A/sprints-2-3-pb-aws-julho-a/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2024-JULHO-A/sprints-2-3-pb-aws-julho-a#readme"
 }
